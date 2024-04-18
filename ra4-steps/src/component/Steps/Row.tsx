@@ -1,10 +1,10 @@
-import { EntryRowProps } from './types';
+import { EntryRowProps, formatDate } from './types';
 
 export const EntryRow = ({ entry, onDelete, onEdit }: EntryRowProps): JSX.Element => {
 
   return (
     <tr className="row">
-      <td>{entry.date}</td>
+      <td>{formatDate(entry.date)}</td>
       <td>{entry.distance}</td>
       <td className='action-buttons'>
         <button onClick={() => onEdit(entry)}>✎</button>

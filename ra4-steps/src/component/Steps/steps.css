@@ -1,36 +1,11 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
-}
-
-.input-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 13px;
-  text-align: left;
-}
-
-.input-group {
-  padding: 10px;
-  padding-bottom: 0;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.input-group input {
-  padding: 5px;
-  margin-bottom: 0; 
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 .input-form {
@@ -40,16 +15,31 @@ body {
   margin-bottom: 20px;
 }
 
-.input-form input,
-.table input {
-  padding: 5px;
+.input-group {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+label {
+  font-size: 70%;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-bottom: 0; 
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.input-form button {
+.submit-button {
   padding: 5px 15px;
-  width: 50%;
+  width: 100%;
   height: auto;
   border: none;
   border-radius: 4px;
@@ -58,28 +48,24 @@ body {
   cursor: pointer;
 }
 
-.input-form button:hover {
+.submit-button:hover {
   background-color: #4cae4c;
 }
 
-.table {
+.table-container {
+  border: 1px solid #ddd;
   border-radius: 5px;
   border-collapse: collapse;
   width: 100%;
   margin-top: 20px;
 }
-
-.table td, .table th {
-  border: 1px solid #ddd;
-  text-align: right;
-  padding: 8px 30px;
+.table-container.inactive {
+  border: none;
 }
 
-.table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: #4CAF50;
-  color: white;
+.table-container td {
+  text-align: right;
+  padding: 8px 30px;
 }
 
 .action-buttons {

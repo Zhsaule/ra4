@@ -46,14 +46,11 @@ export const EntryForm = ({ onAdd, onEdit, editableEntry }: EntryFormProps): JSX
       <div className="input-group">
         <label htmlFor="dateInput">Дата (ДД.ММ.ГГГГ)</label>
         <input
-          type="text"
+          type="date"
           id="dateInput"
           ref={dateInputRef}
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          placeholder="ДД.ММ.ГГГГ"
-          pattern="\d{2}.\d{2}.\d{4}"
-          title="Введите дату в формате ДД.ММ.ГГГГ"
           required
           readOnly={editableEntry !== null}
         />
@@ -71,7 +68,9 @@ export const EntryForm = ({ onAdd, onEdit, editableEntry }: EntryFormProps): JSX
           required
         />
       </div>
-      <button type="submit" id="submit-button" className="submit-button">OK</button>
+      <div className="input-group">
+        <button type="submit" id="submit-button" className="submit-button">OK</button>
+      </div>
     </form>
   );
 };
